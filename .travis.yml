@@ -1,0 +1,25 @@
+language: ruby
+rvm:
+- 2.1
+gemfile: jekyll/Gemfile
+before_script:
+- cd jekyll
+script:
+- bundle exec jekyll build --config _config.yml,_config_deploy.yml
+- bundle exec htmlproof ./_site --only-4xx --disable-external
+deploy:
+  provider: s3
+  access_key_id:
+    secure: qIIRqByYhbKd/6QU3d3Xyf32loIS1WNkwhdavhoUju+Jof/pQCUeF/2Mv60ybP/8WHrGhN24sqdCJXnw6qOmbUsCkBvC94mCHtpoHKP/GKwjO5iRSuWs8XQoKzA60ZNUuBnmQthKQIRjjwwU1xVMjKp28HwteBKBmkkALV/YEBnIyrfbds4mgRfuxqrvz1EGrbowJFJ+ZMQb9nxjt0SqB4Ldr5rJTE217XZ8uxUJmxlNkGrROK2zbLHiSCPP6e3LCbCK4nMSnPxUV2gZZFnhsJBV7VnqOlwZeyPZe84XSz9K31QxNijKwqm/nWPF6kdF7iEfSWwyp7KDPhCYlqL09bRnInAZ4aoCmIqZuBzEfIdfNm0SLV2lPLJ2hdplXvwKZmsGDp4zoQbyIIWwFpLODru1bKvhBuczhMaF4LklBLm3+7+uKpmohpXJR2vL5dlewQVvhrVSxoG5QbwKZCvHYzMF1C2kIcpK57pkjHBD7Y27Egq1M0iASsNDCmjNwsu2UwdfTvnq1TS/yVF0NoUyiBGArFKOxetwGoLALtD4MFlx0KKSgYF2wE/mz8ROpPnwnIKUQwFhB3V+E8hwWdvkANo0IJed5PeX4mAUx4ZxFz9h43i6el+6MrWxGXTVeQlglCULcXThMMRSdBFOnFcc1BUwkMqJ3dRd9QgoRs0dRcw=
+  secret_access_key:
+    secure: u2RvprP6CzE4zREq0oW98WlW25s8GW1jE02JlU0ZEZTBH6EW0hCXKMfLhWpZ7TImfXHicLllhwLcLlelwgH3a818ZyCRjosb/2xbCp01j7cfkuyWTB3aX55lkSfF4by52ogFF5kp8qaJSUvvPQepy12aBxdPwp0WYuWDMlIppGA0Z0cb2JFBCdDvipQyUHpIyvJLGG4eTrJEIq28XoyuuaTpzn7dwZyAKiYreXaKcmf2lv4uhsFgvNmeAv5EFkSH6woMVIENYm93a2yP4h8lx9hkJylglo+UQRcd23pBv4oJIaJYwvGLioCVl21TwP9YWzPdT6Dk71xzAUPnLLn5hjjzflE17NWwnj/sVCmglp9hfPQbRZfdjV95cG1f7MNu6CDrMEL9k9DShoX1nFiiMmvqzmYthT2Px7u5PtN+XvIcNE95wjMfY5zNIs2zYzDzhM9xYI98hjZPlQWxnVN8hRMb3Y9yHj/WQkVZj3jZBy0dt1n3PqsWkB19I3iqtRd0cpo3on5iXX7xOuORx3+qw83rHY+JRVedxO/KiUXkmFyGFnt/cGYrRGPjcZeaYVrL2PttDFXrX2j32xkztKSub5Adc6pU6zSud7sQ2GeKphzuYKxXZCmawrCSmhsvJpSckVBJDrpI1WBvynV/GZSBg8Aqw7vCXXIVbmW5UfeYk3Q=
+  bucket: simonlee.me
+  skip_cleanup: true
+  region: eu-west-1
+  local_dir: $TRAVIS_BUILD_DIR/jekyll/_site
+branches:
+  only:
+  - master
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
