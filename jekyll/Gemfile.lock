@@ -75,7 +75,7 @@ PLATFORMS
 
 DEPENDENCIES
   html-proofer
-  jekyll (~> 3.0)
+  jekyll
   jekyll-paginate
   jemoji
 
