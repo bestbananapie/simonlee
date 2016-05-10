@@ -200,4 +200,7 @@ sass:
 
 gems:
   - jekyll-paginate
-  - jemoji
+  - jemoj
+
+#Fix Jekyll 'bug'
+exclude: [vendor]
