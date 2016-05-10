@@ -203,4 +203,4 @@ gems:
   - jemoji
 
 #Fix Jekyll 'bug'
-#exclude: [vendor]
+exclude: [vendor]
