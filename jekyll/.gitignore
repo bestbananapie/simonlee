@@ -9,6 +9,10 @@ tramp
 .\#*
 
 _site/
+_posts/
+assets/
+img/
+
 .sass-cache/
 *.swp
 pkg/

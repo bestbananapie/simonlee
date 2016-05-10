@@ -3,7 +3,7 @@
 
 # NB! Set your site's url, otherwise stuff will break :)
 
-url: "https://panossakkos.github.io"
+url: "https://simonlee.me"
 
 # If you're hosting your site at a Project repository on GitHub pages
 # (https://yourusername.github.io/repository-name)
@@ -12,11 +12,11 @@ url: "https://panossakkos.github.io"
 #
 # NB! Without this *nothing* will work, because it's used in every path :)
 
-baseurl: /personal-jekyll-theme
+baseurl:
 
 # Google tracking id to track your visitors
 
-google-tracking-id: "UA-35880426-4"
+google-tracking-id: ""
 
 # Forces https everywhere in your website, except when you serve it locally
 # If you are not hosted on Github Pages, and your host doesn't support https
@@ -29,10 +29,10 @@ force-https: True
 #############
 
 lang: "en"
-author: "John Smith"
-title: "{ John Smith }"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
+author: "Simon Lee"
+title: "Simon E. Lee"
+description: "Blog and website of Simon Lee. Opinions expressed are mine."
+keywords: "lee, simon, personal"
 favicon: "/img/favicon.ico"
 
 ################
@@ -41,7 +41,7 @@ favicon: "/img/favicon.ico"
 
 black-favicon: "/img/black-lab-glass.ico"
 
-background-img: "../img/intro-bg.jpg"
+background-img: "../img/bg.jpg"
 
 ##############################
 # Dynamic Text on the Header #
@@ -55,10 +55,11 @@ type-speed: 10
 start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
-  - text: "The lower you fall, the higher you'll fly."
+  - text: "Love the confusion."
   - text: "Where’s your will to be weird?"
+  - text: "Look for the little miracles unfolding right now."
 
-me-img: "/img/jetpacktocat.png"
+me-img: "/img/author.jpg"
 
 ##############################
 # Color the browser elements #
@@ -70,7 +71,7 @@ apple-status-bar-style: "black"
 # Web app mode #
 ################
 
-web-app-mode: True
+web-app-mode: False
 
 # Icons for Web App mode
 
@@ -87,20 +88,20 @@ icon-192p: "/img/web-app/icon-192p.png"
 
 post-preview-words: 96
 
-paginate: 5
+paginate: 10
 
-email-share: True
-fb-share: True
-twitter-share: True
-linkedin-share: True
-reddit-share: True
-google-plus-share: True
-tumblr-share: True
-pinterest-share: True
-pocket-share: True
-vkontakte-share: True
+email-share: False
+fb-share: False
+twitter-share: False
+linkedin-share: False
+reddit-share: False
+google-plus-share: False
+tumblr-share: False
+pinterest-share: False
+pocket-share: False
+vkontakte-share: False
 
-disqus-shortname: "panossakkos"
+disqus-shortname: "simonleeme"
 
 syntax-highlight: True
 
@@ -109,22 +110,36 @@ syntax-highlight: True
 ############
 
 events:
-  - image: "/img/timeline/spidertocat.png"
-    date: "September 2013 - Today"
-    description: "Saving the neighborhood!"
-  - image: "/img/timeline/baracktocat.jpg"
-    date: "September 2007 - August 2013"
-    description: "Started coding"
+  - image: "/img/timeline/arup.png"
+    date: "September 2014 - Today"
+    description: "Doing Mechanical Engineering at [Arup](http://www.arup.com)"
+
+  - image: "/img/timeline/imperial.jpg"
+    date: "October 2010 - July 2014"
+    description: "Studied Mechanical Engineering at [Imperial College London](http://www.imperial.ac.uk/mechanical-engineering)"
+
+  - image: "/img/timeline/nomura.png"
+    date: "Jul 2013 - Sep 2013"
+    description: "Equity Research Analyst at [Nomura](http://www.nomura.com/)"
+
+  - image: "/img/timeline/ssp.png"
+    date: "Aug 2012 - Sep 2012"
+    description: "Engineering consulting at [Sepakat Setia Perunding](http://www.sspsb.com.my/)"
+
+  - image: "/img/timeline/imperial.jpg"
+    date: "Aug 2012 - Sep 2012"
+    description: "Student Researcher at [Imperial College London](http://www.imperial.ac.uk/mechanical-engineering)"
+
 
 # First image of the Timeline
 
-timeline-img: "/img/timeline/default.png"
+timeline-img: "/img/timeline/birth.jpg"
 
 ###########
 # Contact #
 ###########
 
-email: "your@email.here"
+email: "simon@simonlee.me"
 
 ################
 # Author Blurb #
@@ -134,8 +149,8 @@ email: "your@email.here"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: "John Smith is an awesome person. He lives in Flatland, where he works on two-dimensional engineering projects. In his spare time, John likes to eat cotton candy."
-author_blurb_image: "/img/author.png"
+author_blurb: "Simon Lee is a nice person. He lives in London, where he works on three-dimensional engineering projects. In his spare time, Simon likes to eat pizza."
+author_blurb_image: "/img/author.jpg"
 
 ##################
 # Social Buttons #
@@ -143,13 +158,11 @@ author_blurb_image: "/img/author.png"
 
 social:
   - title: "facebook"
-    url: "https://facebook.com/"
-  - title: "twitter"
-    url: "https://twitter.com/"
+    url: "https://facebook.com/hellosimonlee"
   - title: "github"
-    url: "https://github.com/PanosSakkos/personal-jekyll-theme"
-  - title: "bitcoin"
-    url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
+    url: "https://github.com/bestbananapie"
+  - title: "linkedin"
+    url: "https://linkedin.com/in/leesimoneric"
   - title: "rss"
     url: "/feed.xml"
 
@@ -169,6 +182,7 @@ pages_list:
   About: 'about'
   Blog: 'latest-post'
   Timeline: 'timeline'
+  CV: 'resume'
   Contact: 'contact'
 
 # Exclusion list from the generated _site

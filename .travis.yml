@@ -3,10 +3,11 @@ rvm:
 - 2.1
 gemfile: jekyll/Gemfile
 before_script:
+- ./simonlee.sh copy
 - cd jekyll
 script:
-- bundle exec jekyll build --config _config.yml,_config_deploy.yml
-- bundle exec htmlproof ./_site --only-4xx --disable-external
+- bundle exec jekyll build
+- bundle exec htmlproof ./_site --only-4xx --disable-external --empty-alt-ignore
 deploy:
   provider: s3
   access_key_id:
@@ -23,3 +24,4 @@ branches:
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - JEKYLL_ENV=production

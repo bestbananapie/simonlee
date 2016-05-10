@@ -1,7 +1,7 @@
 
 
 #Set base image to Ubuntu
-FROM ruby:2.1
+FROM ruby
 MAINTAINER simonlee
 
 ENV LANG C.UTF-8
@@ -24,5 +24,5 @@ EXPOSE 4000
 
 #ENTRYPOINT ["/bin/bundle","exec"]
 ENTRYPOINT ["bundle","exec"]
-CMD ["jekyll serve --port 4000 --host 0.0.0.0 --baseurl \" \""]
+CMD ["jekyll serve --port 4000 --host 0.0.0.0 --baseurl ''"]
 
