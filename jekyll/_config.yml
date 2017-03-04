@@ -14,7 +14,7 @@ url: "https://simonlee.me"
 
 baseurl:
 
-# Google tracking id to track your visitors
+# Google tracking id
 
 google-tracking-id: ""
 
@@ -85,6 +85,8 @@ icon-192p: "/img/web-app/icon-192p.png"
 ########
 # Blog #
 ########
+
+enable-gesture-navigation: True
 
 post-preview-words: 96
 
@@ -170,7 +172,15 @@ social:
 # 404 page #
 ############
 
-404-img: "/img/labtocat.png"
+err-404-img: "/img/labtocat.png"
+
+##################
+# GPG on Keybase #
+##################
+
+keybase-username: johnsmith
+keybase-in-social: True
+keybase-in-footer: True
 
 ################################################################################
 
